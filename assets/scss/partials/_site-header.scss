@@ -8,9 +8,16 @@
 .site-header {
 	padding-top: 1rem;
 	padding-bottom: 1rem;
-	background: $white;
+	background: $grey_2;
 	position: relative;
 	min-height: 49px;
+
+	.wrap {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+	}
+
 }
 
 .title-area {
