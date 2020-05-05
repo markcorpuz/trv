@@ -69,6 +69,7 @@ function ea_clean_body_classes( $classes ) {
 		'full-width-content',
 		'content-sidebar',
 		'content',
+		'archive-podcast',
 	];
 
 	return array_intersect( $classes, $allowed_classes );

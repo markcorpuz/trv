@@ -1,0 +1,50 @@
+/* TRV | 1.0.0 | 200502 | assets/scss/trv/podcast.scss
+---------------------------------------------------------------------------------------------------- */
+
+	// POST-SUMMARY PODCAST
+	
+	.post-summary.podcast.module {
+
+		background-color: white;
+		border: 1px solid brand-color( 'teal' );
+
+		.items.input {
+			display: grid;
+			grid-template-columns: minmax(auto, 200px) 1fr;
+			grid-column-gap: 1.5rem;
+			padding: 1.5rem;
+		}
+		.items.input.no-podcast-pic {
+			display: grid;
+			grid-template-columns: 1fr;
+		}
+
+		.items.info {}
+
+		.items.meta {
+			@extend %fontsize-tiny !optional;
+			font-weight: 700;
+			padding: 0.25rem 0.5rem;
+			background-color: brand-color( 'teal' );
+			color: $white;
+		}
+
+		.items.proxy {
+			margin-top: 1rem;
+		}
+
+		.item.pic {
+			img {}
+		}
+
+		.item.title {
+			@extend %fontsize-medium !optional;
+			font-weight: 700;
+			line-height: 1.2;
+		}
+
+		.item.excerpt {
+			@extend %fontsize-smaller !optional;
+		}
+
+	}
