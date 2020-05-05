@@ -76,7 +76,7 @@ add_action( 'enqueue_block_editor_assets', 'ea_gutenberg_scripts' );
  */
 function setup_be_theme_fonts_url() {
 	//return false;
-	wp_enqueue_style( 'setup_be_google-font', '//fonts.googleapis.com/css?family=Rubik:300,400,500,700,900', array(), genesis_get_theme_version() );
+	wp_enqueue_style( 'setup_be_google-font', '//fonts.googleapis.com/css?family=Rubik:300,400,500,700,900|Arvo:400,400i,700', array(), genesis_get_theme_version() );
 }
 
 /**
