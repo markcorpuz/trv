@@ -1,4 +1,5 @@
-/* SETUP-BE | 1.0.0 | 200326 | assets/scss/partials/site-header.scss
+/* TRV | 1.0.0 | 200430 | assets/scss/partials/site-header.scss
+// SETUP-BE | 1.0.0 | 200326 | assets/scss/partials/site-header.scss
 ---------------------------------------------------------------------------------------------------- */
 
 /* Site Header
@@ -31,6 +32,12 @@
 			text-decoration: none;
 		}
 	}
+
+.custom-logo-link {
+	max-width: $logo_width;
+}
+
+.custom-logo {}
 
 /*
 	.site-title a {
