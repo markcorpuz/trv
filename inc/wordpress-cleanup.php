@@ -70,6 +70,7 @@ function ea_clean_body_classes( $classes ) {
 		'content-sidebar',
 		'content',
 		'archive-podcast',
+		'single-podcast',
 	];
 
 	return array_intersect( $classes, $allowed_classes );

@@ -1,6 +1,24 @@
 /* TRV | 1.0.0 | 200502 | assets/scss/trv/podcast.scss
 ---------------------------------------------------------------------------------------------------- */
 
+	// SINGLE-PODCAST
+	
+	.site-inner {
+
+		.single-podcast & {}
+	}
+
+	.entry-header {
+
+		.single-podcast.singular & {
+			margin-bottom: 0;
+
+			@include media(">=tablet") {
+				margin-bottom: 0;
+			}
+		}
+	}
+
 	// POST-SUMMARY PODCAST
 	
 	.post-summary.podcast.module {
@@ -41,9 +59,40 @@
 			@extend %fontsize-medium !optional;
 			font-weight: 700;
 			line-height: 1.2;
+
+			.single-podcast & {
+				@extend %fontsize-large !optional;
+			}
+
+		}
+
+		a.item.titlelink {
+			text-decoration: none;
+			color: $base-color;
+
+			&:hover {
+				color: brand-color( 'teal' );
+			}
+
+		}
+
+		.item.cta {
+			@extend %fontsize-tiny !optional;
+			font-weight: 500;
+			margin-top: 0.25rem;
+		}
+
+		a.item.ctalink {
+			text-decoration: none;
+
+			&:hover {
+				color: brand-color( 'teal', darken );
+			}
+
 		}
 
 		.item.excerpt {
+			margin-top: 0.5rem;
 			@extend %fontsize-smaller !optional;
 		}
 
