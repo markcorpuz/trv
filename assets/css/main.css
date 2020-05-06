@@ -1726,7 +1726,7 @@ div.wpforms-container.one-line:after {
   color: #63CECA;
 }
 
-/* TRV | 1.0.0 | 200422 | assets/scss/partials/archive.scss
+/* TRV | 1.0.0 | 200506 | assets/scss/partials/archive.scss
 // SETUP-BE | 1.0.0 | 200422 | assets/scss/partials/archive.scss
 ---------------------------------------------------------------------------------------------------- */
 .archive .site-main .block-area,
@@ -1958,6 +1958,9 @@ div.wpforms-container.one-line:after {
 }
 .archive-description .search-form {
   margin: 0 auto;
+}
+.archive-description .archive-title {
+  font-weight: 700;
 }
 
 .author-archive-description .avatar {
@@ -2544,16 +2547,16 @@ div.wpforms-container.one-line:after {
   }
 }
 
-.fontsize-large {
+.single-podcast .post-summary.podcast.module .item.title, .fontsize-large {
   font-size: 1.5rem;
 }
 @media (min-width: 768px) {
-  .fontsize-large {
+  .single-podcast .post-summary.podcast.module .item.title, .fontsize-large {
     font-size: 1.875rem;
   }
 }
 @media (min-width: 992px) {
-  .fontsize-large {
+  .single-podcast .post-summary.podcast.module .item.title, .fontsize-large {
     font-size: 2.25rem;
   }
 }
@@ -2603,7 +2606,7 @@ div.wpforms-container.one-line:after {
   font-size: 0.875rem;
 }
 
-.post-summary.podcast.module .items.meta, .fontsize-tiny {
+.post-summary.podcast.module .item.cta, .post-summary.podcast.module .items.meta, .fontsize-tiny {
   font-size: 0.75rem;
 }
 
@@ -2940,6 +2943,15 @@ ul.blocks-gallery-grid {
 
 /* TRV | 1.0.0 | 200502 | assets/scss/trv/podcast.scss
 ---------------------------------------------------------------------------------------------------- */
+.single-podcast.singular .entry-header {
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .single-podcast.singular .entry-header {
+    margin-bottom: 0;
+  }
+}
+
 .post-summary.podcast.module {
   background-color: white;
   border: 1px solid #63CECA;
@@ -2966,4 +2978,24 @@ ul.blocks-gallery-grid {
 .post-summary.podcast.module .item.title {
   font-weight: 700;
   line-height: 1.2;
+}
+.post-summary.podcast.module a.item.titlelink {
+  text-decoration: none;
+  color: #424242;
+}
+.post-summary.podcast.module a.item.titlelink:hover {
+  color: #63CECA;
+}
+.post-summary.podcast.module .item.cta {
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+.post-summary.podcast.module a.item.ctalink {
+  text-decoration: none;
+}
+.post-summary.podcast.module a.item.ctalink:hover {
+  color: #3dc1bc;
+}
+.post-summary.podcast.module .item.excerpt {
+  margin-top: 0.5rem;
 }
