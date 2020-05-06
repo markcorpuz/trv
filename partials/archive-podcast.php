@@ -70,7 +70,8 @@ echo '<article class="post-summary module podcast">';
             // CUSTOM | Podcast Title
             $podcast_title = get_post_meta( $pid, "podcast_title", TRUE );
             if( $podcast_title ) {
-                echo '<div class="item title">'.$podcast_title.'</div>';
+                echo '<div class="item title"><a class="item titlelink" href="'.get_the_permalink( $pid ).'">'.$podcast_title.'</a></div>';
+                echo '<div class="item cta"><a class="item ctalink" href="'.get_the_permalink( $pid ).'">VIEW FULL PODCAST PAGE</a></div>';
             }
 
             // CUSTOM | Podcast Participants
@@ -100,7 +101,7 @@ echo '<article class="post-summary module podcast">';
                 // CUSTOM | Podcast Embed
                 $podcast_embed = get_post_meta( $pid, "podcast_embed", TRUE );
                 if( $podcast_embed ) {
-                    echo '<div class="item podcast-embed">'.$podcast_embed.'</idv>';
+                    echo '<div class="item podcast-embed">'.$podcast_embed.'</div>';
                 }
 
             echo '</div>';
