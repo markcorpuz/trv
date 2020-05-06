@@ -1,4 +1,4 @@
-/* SETUP-BE | 1.0.0 | 200326 | assets/scss/partials/base.scss
+/* SETUP-BE | 1.0.0 | 200505 | assets/scss/partials/base.scss
 ---------------------------------------------------------------------------------------------------- */
 
 // Colors
@@ -17,11 +17,11 @@ $black: #000;
 
 // Brand Colors
 $brand_colors: (
-  'blue'      : #56a5e5,    // first color in array used for default button color
-  'red'       : #e5565b,
-  'orange'    : #e59856,
-  'yellow'    : #ffff00,
-  'green'     : #a2e556,
+  'blue'      : #0079bf,    // first color in array used for default button color
+  'red'       : #eb5a46,
+  'orange'    : #ff9f1a,
+  'yellow'    : #f2d600,
+  'green'     : #61bd4f,
   'lightgrey' : $grey_2,
   'grey'      : $grey_5,
   'darkgrey'  : $grey_8,
@@ -63,8 +63,9 @@ $persistent_desktop: false; // 49px
 // Include Media
 $breakpoints: (
   'phone'         : 360px,
+  'tiny'          : 360px,
   'smaller'       : 425px,
-  'small'         : 768px,
+  'small'         : 512px,
   'tablet'        : 768px, // required for include-media
   'mobile_menu'   : 768px,
   'medium'        : 992px,
