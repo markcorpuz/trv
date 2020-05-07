@@ -72,7 +72,7 @@ function trv_single_podcast_entry_content() {
                 // CUSTOM | Podcast Season
                 $podcast_season = get_post_meta( $pid, "podcast_season", TRUE );
                 if( $podcast_season ) {
-                    echo ' | <span class="item season">Season <a href="'.get_term_link( get_term( $podcast_season )->term_id ).'"> '.get_term( $podcast_season )->name.'</a></span>';
+                    echo ' | <span class="item season">Season '.get_term( $podcast_season )->name.'</span>';
                 }
                 
                 // CUSTOM | Podcast Episode
@@ -117,8 +117,8 @@ function trv_single_podcast_entry_content() {
                 // CUSTOM | Podcast Title
                 $podcast_title = get_post_meta( $pid, "podcast_title", TRUE );
                 if( $podcast_title ) {
-                    echo '<div class="item title"><a class="item titlelink" href="'.get_the_permalink( $pid ).'">'.$podcast_title.'</a></div>';
-                    echo '<div class="item cta"><a class="item ctalink" href="">LIST ALL PODCASTS</a></div>';
+                    echo '<div class="item title">'.$podcast_title.'</div>';
+                    echo '<div class="item cta"><a class="item ctalink" href="https://dev.travisalbritton.local/podcast/">LIST ALL PODCASTS</a></div>';
                 }
 
                 // CUSTOM | Podcast Participants
@@ -151,6 +151,19 @@ function trv_single_podcast_entry_content() {
                         echo '<div class="item podcast-embed">'.$podcast_embed.'</div>';
                     }
 
+                echo '</div>';
+
+                // CUSTOM | Podcast Link Apple
+                echo '<div class="items cta">';
+                $podcast_link_apple = get_post_meta( $pid, "podcast_link_apple", TRUE );
+                if( $podcast_link_apple ) {
+                    echo '<span class="item cta">| Listen on </span><span class="item cta apple"><a class="item ctalink apple" href="'.$podcast_link_apple.'">APPLE PODCASTS</a> </span>';
+                }
+                // CUSTOM | Podcast Link Spotify
+                $podcast_link_spotify = get_post_meta( $pid, "podcast_link_spotify", TRUE );
+                if( $podcast_link_spotify ) {
+                    echo '<span class="item cta">| Listen on </span><span class="item cta spotify"><a class="item ctalink spotify" href="'.$podcast_link_spotify.'">SPOTIFY</a> </span>';
+                }
                 echo '</div>';
 
             echo '</div>';
