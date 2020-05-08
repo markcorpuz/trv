@@ -32,4 +32,38 @@ if( get_query_var( 'paged' ) ) {
 	remove_action( 'genesis_archive_title_descriptions', 'genesis_do_archive_headings_intro_text', 12, 3 );
 }
 
+// Add divider
+if( !function_exists( 'setup_starter_add_divider' ) ) {
+
+    function setup_starter_add_divider( $divider, $contents ) {
+
+        $out = ''; // declare empty variable for AWS environments
+
+        if( is_array( $contents ) ) {
+
+            // $contents is an array
+            for( $x=0; $x<=count( $contents ); $x++ ) {
+                
+                $out .= $contents[ $x ];
+                
+                if( ( $x + 1 ) < count( $contents ) ) {
+
+                    $out .= ' '.$divider.' ';
+
+                }
+
+            }
+
+            return $out;
+
+        } else {
+
+            // $contents is not an array | return
+            return $contents;
+        }
+
+    }
+
+}
+
 genesis();

@@ -64,24 +64,23 @@ function trv_single_podcast_entry_content() {
 
         if( $date_published ) {
 
-            echo '<div class="items meta">';
+            // NATIVE | DATE PUBLISHED
+            $dp_array[] = '<span class="item date">'.$date_published.'</span>';
 
-                // NATIVE | DATE PUBLISHED
-                echo '<span class="item date">'.$date_published.'</span>';
+            // CUSTOM | Podcast Season
+            $podcast_season = get_post_meta( $pid, "podcast_season", TRUE );
+            if( $podcast_season ) {
+                $dp_array[] = '<span class="item season">Season '.get_term( $podcast_season )->name.'</span>';
+            }
+            
+            // CUSTOM | Podcast Episode
+            $podcast_episode = get_post_meta( $pid, "podcast_episode", TRUE );
+            if( $podcast_episode ) {
+                $dp_array[] = '<span class="item episode">Episode '.$podcast_episode.'</span>';
+            }
 
-                // CUSTOM | Podcast Season
-                $podcast_season = get_post_meta( $pid, "podcast_season", TRUE );
-                if( $podcast_season ) {
-                    echo ' | <span class="item season">Season '.get_term( $podcast_season )->name.'</span>';
-                }
-                
-                // CUSTOM | Podcast Episode
-                $podcast_episode = get_post_meta( $pid, "podcast_episode", TRUE );
-                if( $podcast_episode ) {
-                    echo ' | <span class="item episode">Episode '.$podcast_episode.'</span>';
-                }
-
-            echo '</div>';
+            // set content with dividers
+            echo '<div class="items meta">'.setup_starter_add_divider( "|", $dp_array ).'</div>';
 
         }
 
@@ -139,32 +138,34 @@ function trv_single_podcast_entry_content() {
                 */
 
                 // NATIVE | EXCERPT
-                if( get_the_excerpt( $pid ) ) {
-                    echo '<div class="item excerpt">'.wp_strip_all_tags( get_the_excerpt( $pid ), TRUE ).'</div>';
+                $wp_native_excerpt = get_the_excerpt( $pid );
+                if( $wp_native_excerpt ) {
+                    echo '<div class="item excerpt">'.wp_strip_all_tags( $wp_native_excerpt, TRUE ).'</div>';
                 }
 
-                echo '<div class="items proxy">';
-
-                    // CUSTOM | Podcast Embed
-                    $podcast_embed = get_post_meta( $pid, "podcast_embed", TRUE );
-                    if( $podcast_embed ) {
-                        echo '<div class="item podcast-embed">'.$podcast_embed.'</div>';
-                    }
-
-                echo '</div>';
+                // CUSTOM | Podcast Embed
+                $podcast_embed = get_post_meta( $pid, "podcast_embed", TRUE );
+                if( $podcast_embed ) {
+                    echo '<div class="items proxy">
+                            <div class="item podcast-embed">'.$podcast_embed.'</div>
+                          </div>';
+                }
 
                 // CUSTOM | Podcast Link Apple
-                echo '<div class="items cta">';
                 $podcast_link_apple = get_post_meta( $pid, "podcast_link_apple", TRUE );
                 if( $podcast_link_apple ) {
-                    echo '<span class="item cta">| Listen on </span><span class="item cta apple"><a class="item ctalink apple" href="'.$podcast_link_apple.'">APPLE PODCASTS</a> </span>';
+                    $podcast_links[] = '<span class="item cta">Listen on </span><span class="item cta apple"><a class="item ctalink apple" href="'.$podcast_link_apple.'">APPLE PODCASTS</a> </span>';
                 }
+
                 // CUSTOM | Podcast Link Spotify
                 $podcast_link_spotify = get_post_meta( $pid, "podcast_link_spotify", TRUE );
                 if( $podcast_link_spotify ) {
-                    echo '<span class="item cta">| Listen on </span><span class="item cta spotify"><a class="item ctalink spotify" href="'.$podcast_link_spotify.'">SPOTIFY</a> </span>';
+                    $podcast_links[] = '<span class="item cta">Listen on </span><span class="item cta spotify"><a class="item ctalink spotify" href="'.$podcast_link_spotify.'">SPOTIFY</a> </span>';
                 }
-                echo '</div>';
+
+                if( $podcast_links ) {
+                    echo '<div class="items cta">'.setup_starter_add_divider( '|', $podcast_links ).'</div>';
+                }
 
             echo '</div>';
 
@@ -176,5 +177,39 @@ function trv_single_podcast_entry_content() {
 }
 add_action( 'genesis_entry_header', 'trv_single_podcast_entry_content', 100 );
 
+
+// Add divider
+if( !function_exists( 'setup_starter_add_divider' ) ) {
+
+    function setup_starter_add_divider( $divider, $contents ) {
+
+        $out = ''; // declare empty variable for AWS environments
+
+        if( is_array( $contents ) ) {
+
+            // $contents is an array
+            for( $x=0; $x<=count( $contents ); $x++ ) {
+                
+                $out .= $contents[ $x ];
+                
+                if( ( $x + 1 ) < count( $contents ) ) {
+
+                    $out .= ' '.$divider.' ';
+
+                }
+
+            }
+
+            return $out;
+
+        } else {
+
+            // $contents is not an array | return
+            return $contents;
+        }
+
+    }
+
+}
 
 genesis();
