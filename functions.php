@@ -102,6 +102,7 @@ function ea_child_theme_setup() {
 	include_once( get_stylesheet_directory() . '/inc/custom-logo-setup-trv.php' );
 	include_once( get_stylesheet_directory() . '/inc/navigation.php' );
 	include_once( get_stylesheet_directory() . '/inc/loop.php' );
+	include_once( get_stylesheet_directory() . '/inc/loop-setup-starter-custax.php' );
 	include_once( get_stylesheet_directory() . '/inc/author-box.php' );
 	include_once( get_stylesheet_directory() . '/inc/template-tags.php' );
 	include_once( get_stylesheet_directory() . '/inc/site-footer-swp.php' );
