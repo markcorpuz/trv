@@ -44,6 +44,18 @@ $sans-serif: "Rubik", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-
 $content-width: 768px;
 $block-margin: 16px;
 
+// Space
+$space-zero: 0;
+$space-px: 0.0625;     // 1px;
+$space-2px: 0.125;     // 2px;
+$space-tiny: 0.25;     // 4px;
+$space-small: 0.5;     // 8px;
+$space-normal: 1;      // 16px;
+$space-medium: 1.5;    // 24px;
+$space-large: 2;       // 32px;
+$space-larger: 2.5;    // 40px;
+$space-huge: 3.125;    // 50px;
+
 // Grid
 $grid: grid;
 $grid-width: 1168px;

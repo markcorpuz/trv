@@ -1,4 +1,4 @@
-/* SETUP-BE | 1.0.0 | 200505 | assets/scss/main.scss
+/* SETUP-BE | 1.0.0 | 200513 | assets/scss/main.scss
 ---------------------------------------------------------------------------------------------------- */
 
 // MAIN
@@ -24,6 +24,10 @@
 @import 	"ui/setup-be-100/grid";
 @import 	"ui/setup-be-100/percent";
 @import 	"ui/setup-be-100/width";
+@import 	"ui/setup-be-100/margin";
+@import 	"ui/setup-be-100/margin-all";
+@import 	"ui/setup-be-100/padding";
+@import 	"ui/setup-be-100/padding-all";
 @import 	"block/setup-be-100/alignwide";
 @import 	"block/setup-be-100/cover";
 @import 	"block/setup-be-100/group";
