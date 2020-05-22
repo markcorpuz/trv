@@ -1,3 +1,5 @@
+/* SETUP-BE | 1.0.0 | 200521 | assets/scss/partials/post-summary.scss
+---------------------------------------------------------------------------------------------------- */
 /* Post Summary
 ---------------------------------------------------------------------------------------------------- */
 
@@ -6,8 +8,8 @@
 }
 
 .post-summary__title {
-	font-size: 18px;
-	font-weight: 400;
+	font-size: 1.25rem;
+	font-weight: 500;
 	margin: 0;
 
 	a {
@@ -19,6 +21,22 @@
 		}
 	}
 }
+.item.title {
+	.post-summary & {
+		font-size: 1.25rem;
+		font-weight: 500;
+		margin: 0;
+
+		a {
+			color: $grey_10;
+			text-decoration: none;
+
+			&:hover {
+				color: $highlight;
+			}
+		}
+	}
+}
 
 .post-summary__image {
 	display: block;
@@ -26,9 +44,13 @@
 		margin-bottom: 12px;
 	}
 }
+.item.image {
+	.post-summary & {}
+}
 
+.item.overline,
 .entry-category {
-	font-size: 12px;
+	font-size: 0.75rem;
 	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -41,5 +63,26 @@
 		&:hover {
 			color: $highlight;
 		}
+	}
+}
+
+.items.meta {
+	.post-summary & {
+		font-size: 0.875rem;
+		margin-top: 1rem;
+	}
+}
+.item.date {
+	.post-summary & {}
+	.post-summary .items.meta & {}
+}
+.item.author {
+	.post-summary & {}
+	.post-summary .items.meta & {}
+}
+
+.item.excerpt {
+	.post-summary & {
+		font-size: 1rem;
 	}
 }
