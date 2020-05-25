@@ -1,55 +1,29 @@
 /* SETUP-BE | 1.0.0 | 200521 | assets/scss/partials/post-summary.scss
 ---------------------------------------------------------------------------------------------------- */
-/* Post Summary
----------------------------------------------------------------------------------------------------- */
 
-.post-summary {
-	margin-bottom: $grid-gap;
-}
 
-.post-summary__title {
-	font-size: 1.25rem;
-	font-weight: 500;
-	margin: 0;
+// FEATURED IMAGE
+//
+// setup_be_image();
+// setup_be_image_nolink();
 
-	a {
-		color: $grey_10;
-		text-decoration: none;
-
-		&:hover {
-			color: $highlight;
-		}
-	}
-}
-.item.title {
-	.post-summary & {
-		font-size: 1.25rem;
-		font-weight: 500;
-		margin: 0;
-
-		a {
-			color: $grey_10;
-			text-decoration: none;
-
-			&:hover {
-				color: $highlight;
-			}
-		}
-	}
-}
-
-.post-summary__image {
-	display: block;
-	@include media(">small") {
-		margin-bottom: 12px;
-	}
-}
 .item.image {
-	.post-summary & {}
+	display: block;
+
+	.module.post-summary & {
+		img {
+			margin-bottom: 1rem;
+		}
+	}
 }
 
-.item.overline,
-.entry-category {
+
+// OVERLINE
+//
+// setup_be_overline();
+// setup_be_overline_nolink();
+
+.item.overline {
 	font-size: 0.75rem;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -64,7 +38,95 @@
 			color: $highlight;
 		}
 	}
+
+	.module.post-summary {}
 }
+
+
+// TITLE
+//
+// setup_be_title() {;
+// setup_be_title_nolink() {;
+
+.item.title {
+	font-size: 1.25rem;
+	font-weight: 500;
+	margin: 0;
+
+	a {
+		color: $grey_10;
+		text-decoration: none;
+
+		&:hover {
+			color: $highlight;
+		}
+	}
+
+	.module.post-summary {}
+}
+
+
+// AUTHOR
+//
+// setup_be_author_name() {;
+// setup_be_author_by_name() {;
+// setup_be_author_gravatar_name() {;
+// setup_be_author_gravatar_by_name() {;
+
+.item.author {
+	font-size: 0.875rem;
+
+	.module.post-summary {}
+}
+/**
+ * Need to fix gravatar styles eventually
+ */
+
+
+// DATE
+//
+// setup_be_date_mdy() {;
+// setup_be_date_weekday_mdy() {;
+
+.item.date {
+	font-size: 0.875rem;
+
+	.module.post-summary {}
+}
+
+
+// EXCERPT
+//
+// setup_be_excerpt();
+// setup_be_excerpt_maxwords();
+
+.item.excerpt {
+	font-size: 1rem;
+
+	.module.post-summary & {}
+}
+
+
+// DATE & AUTHOR (ITEMS)
+// 
+// setup_be_date_by_author_name();
+// setup_be_date_vbar_author_name();
+
+.items.date_vbar_author_name {
+
+	.item.vbar {
+		font-size: 0.875rem;
+	}
+
+	.module.post-summary & {
+		margin-top: 1rem;
+	}
+}
+
+
+
+
+
 
 .items.meta {
 	.post-summary & {
@@ -76,13 +138,23 @@
 	.post-summary & {}
 	.post-summary .items.meta & {}
 }
-.item.author {
-	.post-summary & {}
-	.post-summary .items.meta & {}
+
+// AUTHOR ICON
+
+.item.author.icon {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+
+	img {
+		//display: inline;
+		border-radius: 50%;
+	}
+	.gravatar {
+		margin-right: 0.5rem;
+	}
 }
 
-.item.excerpt {
-	.post-summary & {
-		font-size: 1rem;
-	}
+.post-summary {
+	margin-bottom: $grid-gap;
 }
