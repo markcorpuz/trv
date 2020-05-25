@@ -1359,57 +1359,54 @@ div.wpforms-container.one-line:after {
 
 /* SETUP-BE | 1.0.0 | 200521 | assets/scss/partials/post-summary.scss
 ---------------------------------------------------------------------------------------------------- */
-/* Post Summary
----------------------------------------------------------------------------------------------------- */
-.post-summary {
-  margin-bottom: 32px; }
-
-.post-summary__title {
-  font-size: 1.25rem;
-  font-weight: 500;
-  margin: 0; }
-  .post-summary__title a {
-    color: #212121;
-    text-decoration: none; }
-    .post-summary__title a:hover {
-      color: #0079bf; }
-
-.post-summary .item.title {
-  font-size: 1.25rem;
-  font-weight: 500;
-  margin: 0; }
-  .post-summary .item.title a {
-    color: #212121;
-    text-decoration: none; }
-    .post-summary .item.title a:hover {
-      color: #0079bf; }
-
-.post-summary__image {
+.item.image {
   display: block; }
-  @media (min-width: 513px) {
-    .post-summary__image {
-      margin-bottom: 12px; } }
-.item.overline,
-.entry-category {
+  .module.post-summary .item.image img {
+    margin-bottom: 1rem; }
+
+.item.overline {
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 4px; }
-  .item.overline a,
-  .entry-category a {
+  .item.overline a {
     color: #616161;
     text-decoration: none; }
-    .item.overline a:hover,
-    .entry-category a:hover {
+    .item.overline a:hover {
       color: #0079bf; }
+
+.item.title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 0; }
+  .item.title a {
+    color: #212121;
+    text-decoration: none; }
+    .item.title a:hover {
+      color: #0079bf; }
+
+.item.author {
+  font-size: 0.875rem; }
+
+/**
+ * Need to fix gravatar styles eventually
+ */
+.item.date {
+  font-size: 0.875rem; }
+
+.item.excerpt {
+  font-size: 1rem; }
+
+.items.date_vbar_author_name .item.vbar {
+  font-size: 0.875rem; }
+
+.module.post-summary .items.date_vbar_author_name {
+  margin-top: 1rem; }
 
 .post-summary .items.meta {
   font-size: 0.875rem;
   margin-top: 1rem; }
-
-.item.author {
-  font-size: 0.875rem; }
 
 .item.author.icon {
   display: flex;
@@ -1420,8 +1417,8 @@ div.wpforms-container.one-line:after {
   .item.author.icon .gravatar {
     margin-right: 0.5rem; }
 
-.post-summary .item.excerpt {
-  font-size: 1rem; }
+.post-summary {
+  margin-bottom: 32px; }
 
 /* SETUP-BE | 1.0.0 | 200521 | assets/scss/partials/archive.scss
 ---------------------------------------------------------------------------------------------------- */
