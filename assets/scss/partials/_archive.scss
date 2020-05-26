@@ -1,5 +1,4 @@
-/* TRV | 1.0.0 | 200506 | assets/scss/partials/archive.scss
-// SETUP-BE | 1.0.0 | 200422 | assets/scss/partials/archive.scss
+/* SETUP-BE | 1.0.0 | 200521 | assets/scss/partials/archive.scss
 ---------------------------------------------------------------------------------------------------- */
 
 .archive {
@@ -121,7 +120,7 @@
 
 .pagination {
 	border-top: 1px solid $border-color;
-	font-size: 16px;
+	font-size: 1.25rem;
 	text-align: center;
 	padding-top: 22px;
 
@@ -159,5 +158,21 @@
 				font-weight: 700;
 			}
 		}
+	}
+	.pagination-previous a,
+	.pagination-next a {
+		text-decoration: none;
+		font-weight: 500;
+		color: $base-color;
+
+		&:hover {
+			color: $highlight;
+		}
+	}
+	.pagination-previous.alignleft {
+		float: left;
+	}
+	.pagination-next.alignright {
+		float: right;
 	}
 }

@@ -1,4 +1,4 @@
-/* SETUP-BE | 1.0.0 | 200326 | assets/scss/partials/base.scss
+/* SETUP-BE | 1.0.0 | 200505 | assets/scss/partials/base.scss
 ---------------------------------------------------------------------------------------------------- */
 
 // Colors
@@ -20,11 +20,11 @@ $darkgrey-trv: #6c6f70;
 
 // Brand Colors
 $brand_colors: (
-  'blue'      : #56a5e5,    // first color in array used for default button color
-  'red'       : #e5565b,
-  'orange'    : #e59856,
-  'yellow'    : #ffff00,
-  'green'     : #a2e556,
+  'blue'      : #0079bf,    // first color in array used for default button color
+  'red'       : #eb5a46,
+  'orange'    : #ff9f1a,
+  'yellow'    : #f2d600,
+  'green'     : #61bd4f,
   'lightgrey' : $grey_2,
   'grey'      : $grey_5,
   'darkgrey'  : $grey_8,
@@ -48,6 +48,18 @@ $sans-serif: "Rubik", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-
 // Content
 $content-width: 768px;
 $block-margin: 16px;
+
+// Space
+$space-zero: 0;
+$space-px: 0.0625;     // 1px;
+$space-2px: 0.125;     // 2px;
+$space-tiny: 0.25;     // 4px;
+$space-small: 0.5;     // 8px;
+$space-normal: 1;      // 16px;
+$space-medium: 1.5;    // 24px;
+$space-large: 2;       // 32px;
+$space-larger: 2.5;    // 40px;
+$space-huge: 3.125;    // 50px;
 
 // Grid
 $grid: grid;
