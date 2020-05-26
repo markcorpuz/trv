@@ -1,4 +1,6 @@
-/* SETUP-BE | 1.0.0 | 200326 | assets/scss/partials/base.scss
+/* TRV | 1.0.0 | 200526 | assets/scss/main.scss
+---------------------------------------------------------------------------------------------------- */
+/* SETUP-BE | 1.0.0 | 200505 | assets/scss/partials/base.scss
 ---------------------------------------------------------------------------------------------------- */
 /**
  * Brand Color
@@ -839,7 +841,7 @@ h6 {
   }
 }
 
-/* SETUP-BE | 1.0.0 | 200416 | assets/scss/partials/blocks-core.scss
+/* SETUP-BE | 1.0.0 | 200505 | assets/scss/partials/blocks-core.scss
 ---------------------------------------------------------------------------------------------------- */
 /* Button
 --------------------------------------------- */
@@ -894,40 +896,40 @@ h6 {
   color: white;
 }
 .wp-block-button__link:not(.has-background) {
-  background-color: #56a5e5;
+  background-color: #0079bf;
 }
 .wp-block-button__link:not(.has-background):hover, .wp-block-button__link:not(.has-background):focus {
-  background-color: #2a8dde;
+  background-color: #00598c;
 }
 .wp-block-button__link.has-blue-color:hover, .wp-block-button__link.has-blue-color:focus {
-  color: #56a5e5;
+  color: #0079bf;
 }
 .wp-block-button__link.has-blue-background-color:hover, .wp-block-button__link.has-blue-background-color:focus {
-  background-color: #2a8dde;
+  background-color: #00598c;
 }
 .wp-block-button__link.has-red-color:hover, .wp-block-button__link.has-red-color:focus {
-  color: #e5565b;
+  color: #eb5a46;
 }
 .wp-block-button__link.has-red-background-color:hover, .wp-block-button__link.has-red-background-color:focus {
-  background-color: #de2a30;
+  background-color: #e53219;
 }
 .wp-block-button__link.has-orange-color:hover, .wp-block-button__link.has-orange-color:focus {
-  color: #e59856;
+  color: #ff9f1a;
 }
 .wp-block-button__link.has-orange-background-color:hover, .wp-block-button__link.has-orange-background-color:focus {
-  background-color: #de7d2a;
+  background-color: #e68600;
 }
 .wp-block-button__link.has-yellow-color:hover, .wp-block-button__link.has-yellow-color:focus {
-  color: #ffff00;
+  color: #f2d600;
 }
 .wp-block-button__link.has-yellow-background-color:hover, .wp-block-button__link.has-yellow-background-color:focus {
-  background-color: #cccc00;
+  background-color: #bfa900;
 }
 .wp-block-button__link.has-green-color:hover, .wp-block-button__link.has-green-color:focus {
-  color: #a2e556;
+  color: #61bd4f;
 }
 .wp-block-button__link.has-green-background-color:hover, .wp-block-button__link.has-green-background-color:focus {
-  background-color: #8ade2a;
+  background-color: #4b9e3b;
 }
 .wp-block-button__link.has-lightgrey-color:hover, .wp-block-button__link.has-lightgrey-color:focus {
   color: #F5F5F5;
@@ -1017,6 +1019,10 @@ hr::before {
 
 /* Image
 --------------------------------------------- */
+figure {
+  margin: 0;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -1056,43 +1062,43 @@ img.aligncenter {
 /* Color Options
 --------------------------------------------- */
 .has-blue-color {
-  color: #56a5e5;
+  color: #0079bf;
 }
 
 .has-blue-background-color {
-  background-color: #56a5e5;
+  background-color: #0079bf;
 }
 
 .has-red-color {
-  color: #e5565b;
+  color: #eb5a46;
 }
 
 .has-red-background-color {
-  background-color: #e5565b;
+  background-color: #eb5a46;
 }
 
 .has-orange-color {
-  color: #e59856;
+  color: #ff9f1a;
 }
 
 .has-orange-background-color {
-  background-color: #e59856;
+  background-color: #ff9f1a;
 }
 
 .has-yellow-color {
-  color: #ffff00;
+  color: #f2d600;
 }
 
 .has-yellow-background-color {
-  background-color: #ffff00;
+  background-color: #f2d600;
 }
 
 .has-green-color {
-  color: #a2e556;
+  color: #61bd4f;
 }
 
 .has-green-background-color {
-  background-color: #a2e556;
+  background-color: #61bd4f;
 }
 
 .has-lightgrey-color {
@@ -1683,51 +1689,147 @@ div.wpforms-container.one-line:after {
   display: none;
 }
 
-/* Post Summary
+/* SETUP-BE | 1.0.0 | 200521 | assets/scss/partials/post-summary.scss
 ---------------------------------------------------------------------------------------------------- */
-.post-summary {
-  margin-bottom: 32px;
-}
-
-.post-summary__title {
-  font-size: 18px;
-  font-weight: 400;
-  margin: 0;
-}
-.post-summary__title a {
-  color: #212121;
-  text-decoration: none;
-}
-.post-summary__title a:hover {
-  color: #63CECA;
-}
-
-.post-summary__image {
+.item.image {
   display: block;
 }
-@media (min-width: 513px) {
-  .post-summary__image {
-    margin-bottom: 12px;
-  }
+.module.post-summary .item.image img {
+  margin-bottom: 1rem;
 }
 
-.entry-category {
-  font-size: 12px;
+.item.overline {
+  font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 4px;
 }
-.entry-category a {
+.item.overline a {
   color: #616161;
   text-decoration: none;
 }
-.entry-category a:hover {
+.item.overline a:hover {
   color: #63CECA;
 }
+.item.title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 0;
+}
+.item.title a {
+  color: #212121;
+  text-decoration: none;
+}
+.item.title a:hover {
+  color: #63CECA;
+}
+.item.author {
+  font-size: 0.875rem;
+}
+/**
+ * Need to fix gravatar styles eventually
+ */
+.item.date {
+  font-size: 0.875rem;
+}
+.item.excerpt {
+  font-size: 1rem;
+}
+.items.date_vbar_author_name .item.vbar {
+  font-size: 0.875rem;
+}
+.module.post-summary .items.date_vbar_author_name {
+  margin-top: 1rem;
+}
 
-/* TRV | 1.0.0 | 200506 | assets/scss/partials/archive.scss
-// SETUP-BE | 1.0.0 | 200422 | assets/scss/partials/archive.scss
+.post-summary .items.meta {
+  font-size: 0.875rem;
+  margin-top: 1rem;
+}
+
+.item.author.icon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.item.author.icon img {
+  border-radius: 50%;
+}
+.item.author.icon .gravatar {
+  margin-right: 0.5rem;
+}
+
+.post-summary {
+  margin-bottom: 32px;
+}
+
+/* TRV | 1.0.0 | 200526 | assets/scss/partials/post-summary-podcast.scss
+---------------------------------------------------------------------------------------------------- */
+.module.podcast.post-summary {
+  background-color: white;
+  border: 1px solid #63CECA;
+  padding: 1.5rem;
+}
+
+.item.grid-fourth-threefourth {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 1.5rem;
+}
+
+.item.title.podcast_title {
+  font-weight: 700;
+  line-height: 1.2;
+}
+.item.title.podcast_title a {
+  text-decoration: none;
+  color: #424242;
+}
+.item.title.podcast_title a:hover {
+  color: #63CECA;
+}
+.item.author {
+  font-size: 0.875rem;
+}
+/**
+ * Need to fix gravatar styles eventually
+ */
+.item.date {
+  font-size: 0.875rem;
+}
+.item.excerpt {
+  font-size: 1rem;
+}
+.items.date_vbar_author_name .item.vbar {
+  font-size: 0.875rem;
+}
+.module.post-summary .items.date_vbar_author_name {
+  margin-top: 1rem;
+}
+
+.post-summary .items.meta {
+  font-size: 0.875rem;
+  margin-top: 1rem;
+}
+
+.item.author.icon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.item.author.icon img {
+  border-radius: 50%;
+}
+.item.author.icon .gravatar {
+  margin-right: 0.5rem;
+}
+
+.post-summary {
+  margin-bottom: 32px;
+}
+
+/* SETUP-BE | 1.0.0 | 200521 | assets/scss/partials/archive.scss
 ---------------------------------------------------------------------------------------------------- */
 .archive .site-main .block-area,
 .archive .site-main .no-results {
@@ -1990,7 +2092,7 @@ div.wpforms-container.one-line:after {
 --------------------------------------------- */
 .pagination {
   border-top: 1px solid #E0E0E0;
-  font-size: 16px;
+  font-size: 1.25rem;
   text-align: center;
   padding-top: 22px;
 }
@@ -2022,6 +2124,22 @@ div.wpforms-container.one-line:after {
   background: #63CECA;
   color: #fff;
   font-weight: 700;
+}
+.pagination .pagination-previous a,
+.pagination .pagination-next a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #424242;
+}
+.pagination .pagination-previous a:hover,
+.pagination .pagination-next a:hover {
+  color: #63CECA;
+}
+.pagination .pagination-previous.alignleft {
+  float: left;
+}
+.pagination .pagination-next.alignright {
+  float: right;
 }
 
 /* Singular
@@ -2379,7 +2497,7 @@ div.wpforms-container.one-line:after {
   text-decoration: none;
 }
 .footer-widgets a:hover {
-  color: #56a5e5;
+  color: #0079bf;
   text-decoration: underline;
 }
 .footer-widgets p > a {
@@ -2561,16 +2679,16 @@ div.wpforms-container.one-line:after {
   }
 }
 
-.post-summary.podcast.module .item.title, .fontsize-medium {
+.post-summary.podcast.module .item.title, .fontsize-medium, .item.title.podcast_title {
   font-size: 1.25rem;
 }
 @media (min-width: 768px) {
-  .post-summary.podcast.module .item.title, .fontsize-medium {
+  .post-summary.podcast.module .item.title, .fontsize-medium, .item.title.podcast_title {
     font-size: 1.375rem;
   }
 }
 @media (min-width: 992px) {
-  .post-summary.podcast.module .item.title, .fontsize-medium {
+  .post-summary.podcast.module .item.title, .fontsize-medium, .item.title.podcast_title {
     font-size: 1.5rem;
   }
 }
@@ -2777,6 +2895,352 @@ div.wpforms-container.one-line:after {
 
 .wp-block-group.inner-container_tiny > .wp-block-group__inner-container, .wp-block-cover.inner-container_tiny > .wp-block-cover__inner-container, .maxwidth-tiny {
   max-width: 360px;
+}
+
+/* SETUP-BE | 1.0.0 | 200513 | setup-be/ui/setup-be-100/margin.scss
+---------------------------------------------------------------------------------------------------- */
+.wp-block-group.inner-container_margin .wp-block-group__inner-container, .wp-block-cover.inner-container_margin .wp-block-cover__inner-container, .margin-top, .margin-y, .margin {
+  margin-top: 1rem;
+}
+
+.margin-tiny-top, .margin-tiny {
+  margin-top: 0.25rem;
+}
+
+.margin-small-top, .margin-small {
+  margin-top: 0.5rem;
+}
+
+.margin-medium-top, .margin-medium {
+  margin-top: 1.5rem;
+}
+
+.margin-large-top, .margin-large {
+  margin-top: 2rem;
+}
+
+.margin-huge-top, .margin-huge {
+  margin-top: 3.125rem;
+}
+
+.full-width-content .wp-block-group.alignfull, .content .wp-block-group.alignfull, .wp-block-group.alignfull, .wp-block-group.margin-zero-y.alignfull, .wp-block-group.margin-zero-vertical.alignfull, .full-width-content .wp-block-cover.alignfull, .content .wp-block-cover.alignfull, .wp-block-cover.alignfull, .wp-block-cover.margin-zero-y.alignfull, .wp-block-cover.margin-zero-vertical.alignfull, .margin-zero-top, .margin-zero-y, .margin-zero {
+  margin-top: 0;
+}
+
+.wp-block-group.inner-container_margin .wp-block-group__inner-container, .wp-block-cover.inner-container_margin .wp-block-cover__inner-container, .margin-bottom, .margin {
+  margin-bottom: 1rem;
+}
+
+.margin-tiny-bottom, .margin-tiny {
+  margin-bottom: 0.25rem;
+}
+
+.margin-small-bottom, .margin-small {
+  margin-bottom: 0.5rem;
+}
+
+.margin-medium-bottom, .margin-medium {
+  margin-bottom: 1.5rem;
+}
+
+.margin-large-bottom, .margin-large {
+  margin-bottom: 2rem;
+}
+
+.margin-huge-bottom, .margin-huge {
+  margin-bottom: 3.125rem;
+}
+
+.full-width-content .wp-block-group.alignfull, .content .wp-block-group.alignfull, .wp-block-group.alignfull, .wp-block-group.margin-zero-y.alignfull, .wp-block-group.margin-zero-vertical.alignfull, .full-width-content .wp-block-cover.alignfull, .content .wp-block-cover.alignfull, .wp-block-cover.alignfull, .wp-block-cover.margin-zero-y.alignfull, .wp-block-cover.margin-zero-vertical.alignfull, .margin-zero-bottom, .margin-zero-y, .margin-zero {
+  margin-bottom: 0;
+}
+
+.wp-block-group.inner-container_margin .wp-block-group__inner-container, .wp-block-cover.inner-container_margin .wp-block-cover__inner-container, .margin-left, .margin-x, .margin {
+  margin-left: 1rem;
+}
+
+.margin-tiny-left, .margin-tiny {
+  margin-left: 0.25rem;
+}
+
+.margin-small-left, .margin-small {
+  margin-left: 0.5rem;
+}
+
+.margin-medium-left, .margin-medium {
+  margin-left: 1.5rem;
+}
+
+.margin-large-left, .margin-large {
+  margin-left: 2rem;
+}
+
+.margin-huge-left, .margin-huge {
+  margin-left: 3.125rem;
+}
+
+.margin-zero-left, .margin-zero-x, .margin-zero {
+  margin-left: 0;
+}
+
+.wp-block-group.inner-container_margin .wp-block-group__inner-container, .wp-block-cover.inner-container_margin .wp-block-cover__inner-container, .margin-right, .margin-x, .margin {
+  margin-right: 1rem;
+}
+
+.margin-tiny-right, .margin-tiny {
+  margin-right: 0.25rem;
+}
+
+.margin-small-right, .margin-small {
+  margin-right: 0.5rem;
+}
+
+.margin-medium-right, .margin-medium {
+  margin-right: 1.5rem;
+}
+
+.margin-large-right, .margin-large {
+  margin-right: 2rem;
+}
+
+.margin-huge-right, .margin-huge {
+  margin-right: 3.125rem;
+}
+
+.margin-zero-right, .margin-zero-x, .margin-zero {
+  margin-right: 0;
+}
+
+/* SETUP-BE | 1.0.0 | 200513 | setup-be/ui/setup-be-100/margin-all.scss
+---------------------------------------------------------------------------------------------------- */
+/* SETUP-BE | 1.0.0 | 200513 | setup-be/ui/setup-be-100/padding.scss
+---------------------------------------------------------------------------------------------------- */
+.wp-block-group.inner-container_padding .wp-block-group__inner-container, .wp-block-cover.inner-container_padding .wp-block-cover__inner-container, .padding-top, .padding-y, .padding {
+  padding-top: 1rem;
+}
+
+.padding-tiny-top, .padding-tiny {
+  padding-top: 0.25rem;
+}
+
+.padding-small-top, .padding-small {
+  padding-top: 0.5rem;
+}
+
+.padding-medium-top, .padding-medium {
+  padding-top: 1.5rem;
+}
+
+.padding-large-top, .padding-large {
+  padding-top: 2rem;
+}
+
+.padding-huge-top, .padding-huge {
+  padding-top: 3.125rem;
+}
+
+.padding-zero-top, .padding-zero-y, .padding-zero {
+  padding-top: 0;
+}
+
+.wp-block-group.inner-container_padding .wp-block-group__inner-container, .wp-block-cover.inner-container_padding .wp-block-cover__inner-container, .padding-bottom, .padding {
+  padding-bottom: 1rem;
+}
+
+.padding-tiny-bottom, .padding-tiny {
+  padding-bottom: 0.25rem;
+}
+
+.padding-small-bottom, .padding-small {
+  padding-bottom: 0.5rem;
+}
+
+.padding-medium-bottom, .padding-medium {
+  padding-bottom: 1.5rem;
+}
+
+.padding-large-bottom, .padding-large {
+  padding-bottom: 2rem;
+}
+
+.padding-huge-bottom, .padding-huge {
+  padding-bottom: 3.125rem;
+}
+
+.padding-zero-bottom, .padding-zero-y, .padding-zero {
+  padding-bottom: 0;
+}
+
+.wp-block-group.inner-container_padding .wp-block-group__inner-container, .wp-block-cover.inner-container_padding .wp-block-cover__inner-container, .padding-left, .padding-x, .padding {
+  padding-left: 1rem;
+}
+
+.padding-tiny-left, .padding-tiny {
+  padding-left: 0.25rem;
+}
+
+.padding-small-left, .padding-small {
+  padding-left: 0.5rem;
+}
+
+.padding-medium-left, .padding-medium {
+  padding-left: 1.5rem;
+}
+
+.padding-large-left, .padding-large {
+  padding-left: 2rem;
+}
+
+.padding-huge-left, .padding-huge {
+  padding-left: 3.125rem;
+}
+
+.padding-zero-left, .padding-zero-x, .padding-zero {
+  padding-left: 0;
+}
+
+.wp-block-group.inner-container_padding .wp-block-group__inner-container, .wp-block-cover.inner-container_padding .wp-block-cover__inner-container, .padding-right, .padding-x, .padding {
+  padding-right: 1rem;
+}
+
+.padding-tiny-right, .padding-tiny {
+  padding-right: 0.25rem;
+}
+
+.padding-small-right, .padding-small {
+  padding-right: 0.5rem;
+}
+
+.padding-medium-right, .padding-medium {
+  padding-right: 1.5rem;
+}
+
+.padding-large-right, .padding-large {
+  padding-right: 2rem;
+}
+
+.padding-huge-right, .padding-huge {
+  padding-right: 3.125rem;
+}
+
+.padding-zero-right, .padding-zero-x, .padding-zero {
+  padding-right: 0;
+}
+
+/* SETUP-BE | 1.0.0 | 200513 | setup-be/ui/setup-be-100/padding-all.scss
+---------------------------------------------------------------------------------------------------- */
+/* SETUP-BE | 1.0.0 | 200514 | setup-be/ui/setup-be-100/shadow.scss
+---------------------------------------------------------------------------------------------------- */
+.shadow-inner,
+.shadow-inner-bottom {
+  -webkit-box-shadow: inset 0px -100px 20px -100px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0px -100px 20px -100px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0px -100px 20px -100px rgba(0, 0, 0, 0.15);
+}
+
+.shadow-inner-top {
+  -webkit-box-shadow: inset 0px 100px 20px -100px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0px 100px 20px -100px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0px 100px 20px -100px rgba(0, 0, 0, 0.15);
+}
+
+.shadow-inner-dark,
+.shadow-inner-dark-bottom {
+  -webkit-box-shadow: inset 0px -100px 40px -100px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: inset 0px -100px 40px -100px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0px -100px 40px -100px rgba(0, 0, 0, 0.25);
+}
+
+.shadow-inner-dark-top {
+  -webkit-box-shadow: inset 0px 100px 40px -100px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: inset 0px 100px 40px -100px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0px 100px 40px -100px rgba(0, 0, 0, 0.25);
+}
+
+.shadow-inner-darker,
+.shadow-inner-darker-bottom {
+  -webkit-box-shadow: inset 0px -100px 60px -100px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0px -100px 60px -100px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px -100px 60px -100px rgba(0, 0, 0, 0.5);
+}
+
+.shadow-inner-darker-top {
+  -webkit-box-shadow: inset 0px 100px 60px -100px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0px 100px 60px -100px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 100px 60px -100px rgba(0, 0, 0, 0.5);
+}
+
+.shadow-lighter,
+.shadow-outer-lighter, a.shadow-light:hover {
+  -webkit-box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.shadow-light,
+.shadow-outer-light, a.shadow:hover, a.shadow-light,
+a.shadow-light:link {
+  -webkit-box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.15);
+}
+
+.shadow,
+.shadow-outer, a.shadow,
+a.shadow:link {
+  -webkit-box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.25);
+}
+
+.shadow-dark,
+.shadow-outer-dark {
+  -webkit-box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+.shadow-darker,
+.shadow-outer-darker {
+  -webkit-box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.75);
+}
+
+.shadow-edge {
+  -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.25);
+}
+
+.shadow-edge-top {
+  -webkit-box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.25);
+}
+
+.shadow-edge-dark {
+  -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+}
+
+.shadow-edge-dark-top {
+  -webkit-box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.5);
+}
+
+.shadow-edge-darker {
+  -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.75);
+}
+
+.shadow-edge-darker-top {
+  -webkit-box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.75);
 }
 
 /* SETUP-BE | 1.0.0 | 200501 | setup-be/block/setup-be-100/alignwide.scss

@@ -1,4 +1,4 @@
-/* SETUP-BE | 1.0.0 | 200326 | assets/scss/partials/base.scss
+/* SETUP-BE | 1.0.0 | 200505 | assets/scss/partials/base.scss
 ---------------------------------------------------------------------------------------------------- */
 /**
  * Brand Color
@@ -318,7 +318,7 @@ h6 {
   }
 }
 
-/* SETUP-BE | 1.0.0 | 200416 | assets/scss/partials/blocks-core.scss
+/* SETUP-BE | 1.0.0 | 200505 | assets/scss/partials/blocks-core.scss
 ---------------------------------------------------------------------------------------------------- */
 /* Button
 --------------------------------------------- */
@@ -373,40 +373,40 @@ h6 {
   color: white;
 }
 .wp-block-button__link:not(.has-background) {
-  background-color: #56a5e5;
+  background-color: #0079bf;
 }
 .wp-block-button__link:not(.has-background):hover, .wp-block-button__link:not(.has-background):focus {
-  background-color: #2a8dde;
+  background-color: #00598c;
 }
 .wp-block-button__link.has-blue-color:hover, .wp-block-button__link.has-blue-color:focus {
-  color: #56a5e5;
+  color: #0079bf;
 }
 .wp-block-button__link.has-blue-background-color:hover, .wp-block-button__link.has-blue-background-color:focus {
-  background-color: #2a8dde;
+  background-color: #00598c;
 }
 .wp-block-button__link.has-red-color:hover, .wp-block-button__link.has-red-color:focus {
-  color: #e5565b;
+  color: #eb5a46;
 }
 .wp-block-button__link.has-red-background-color:hover, .wp-block-button__link.has-red-background-color:focus {
-  background-color: #de2a30;
+  background-color: #e53219;
 }
 .wp-block-button__link.has-orange-color:hover, .wp-block-button__link.has-orange-color:focus {
-  color: #e59856;
+  color: #ff9f1a;
 }
 .wp-block-button__link.has-orange-background-color:hover, .wp-block-button__link.has-orange-background-color:focus {
-  background-color: #de7d2a;
+  background-color: #e68600;
 }
 .wp-block-button__link.has-yellow-color:hover, .wp-block-button__link.has-yellow-color:focus {
-  color: #ffff00;
+  color: #f2d600;
 }
 .wp-block-button__link.has-yellow-background-color:hover, .wp-block-button__link.has-yellow-background-color:focus {
-  background-color: #cccc00;
+  background-color: #bfa900;
 }
 .wp-block-button__link.has-green-color:hover, .wp-block-button__link.has-green-color:focus {
-  color: #a2e556;
+  color: #61bd4f;
 }
 .wp-block-button__link.has-green-background-color:hover, .wp-block-button__link.has-green-background-color:focus {
-  background-color: #8ade2a;
+  background-color: #4b9e3b;
 }
 .wp-block-button__link.has-lightgrey-color:hover, .wp-block-button__link.has-lightgrey-color:focus {
   color: #F5F5F5;
@@ -496,6 +496,10 @@ hr::before {
 
 /* Image
 --------------------------------------------- */
+figure {
+  margin: 0;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -535,43 +539,43 @@ img.aligncenter {
 /* Color Options
 --------------------------------------------- */
 .has-blue-color {
-  color: #56a5e5;
+  color: #0079bf;
 }
 
 .has-blue-background-color {
-  background-color: #56a5e5;
+  background-color: #0079bf;
 }
 
 .has-red-color {
-  color: #e5565b;
+  color: #eb5a46;
 }
 
 .has-red-background-color {
-  background-color: #e5565b;
+  background-color: #eb5a46;
 }
 
 .has-orange-color {
-  color: #e59856;
+  color: #ff9f1a;
 }
 
 .has-orange-background-color {
-  background-color: #e59856;
+  background-color: #ff9f1a;
 }
 
 .has-yellow-color {
-  color: #ffff00;
+  color: #f2d600;
 }
 
 .has-yellow-background-color {
-  background-color: #ffff00;
+  background-color: #f2d600;
 }
 
 .has-green-color {
-  color: #a2e556;
+  color: #61bd4f;
 }
 
 .has-green-background-color {
-  background-color: #a2e556;
+  background-color: #61bd4f;
 }
 
 .has-lightgrey-color {
@@ -817,47 +821,79 @@ div.wpforms-container.one-line:after {
   display: none;
 }
 
-/* Post Summary
+/* SETUP-BE | 1.0.0 | 200521 | assets/scss/partials/post-summary.scss
 ---------------------------------------------------------------------------------------------------- */
-.post-summary {
-  margin-bottom: 32px;
-}
-
-.post-summary__title {
-  font-size: 18px;
-  font-weight: 400;
-  margin: 0;
-}
-.post-summary__title a {
-  color: #212121;
-  text-decoration: none;
-}
-.post-summary__title a:hover {
-  color: #63CECA;
-}
-
-.post-summary__image {
+.item.image {
   display: block;
 }
-@media (min-width: 513px) {
-  .post-summary__image {
-    margin-bottom: 12px;
-  }
+.module.post-summary .item.image img {
+  margin-bottom: 1rem;
 }
 
-.entry-category {
-  font-size: 12px;
+.item.overline {
+  font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 4px;
 }
-.entry-category a {
+.item.overline a {
   color: #616161;
   text-decoration: none;
 }
-.entry-category a:hover {
+.item.overline a:hover {
   color: #63CECA;
+}
+.item.title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 0;
+}
+.item.title a {
+  color: #212121;
+  text-decoration: none;
+}
+.item.title a:hover {
+  color: #63CECA;
+}
+.item.author {
+  font-size: 0.875rem;
+}
+/**
+ * Need to fix gravatar styles eventually
+ */
+.item.date {
+  font-size: 0.875rem;
+}
+.item.excerpt {
+  font-size: 1rem;
+}
+.items.date_vbar_author_name .item.vbar {
+  font-size: 0.875rem;
+}
+.module.post-summary .items.date_vbar_author_name {
+  margin-top: 1rem;
+}
+
+.post-summary .items.meta {
+  font-size: 0.875rem;
+  margin-top: 1rem;
+}
+
+.item.author.icon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.item.author.icon img {
+  border-radius: 50%;
+}
+.item.author.icon .gravatar {
+  margin-right: 0.5rem;
+}
+
+.post-summary {
+  margin-bottom: 32px;
 }
 
 body, p {
