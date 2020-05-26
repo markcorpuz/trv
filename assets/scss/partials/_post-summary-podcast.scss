@@ -1,0 +1,139 @@
+/* TRV | 1.0.0 | 200526 | assets/scss/partials/post-summary-podcast.scss
+---------------------------------------------------------------------------------------------------- */
+
+
+// MODULE PODCAST
+//
+
+.module.podcast.post-summary {
+	background-color: white;
+	border: 1px solid brand-color( 'teal' );
+	padding: 1.5rem;
+}
+
+// ITEM CONTAINERS
+//
+
+.item.grid-fourth-threefourth {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	grid-gap: 1.5rem;
+}
+.items.info {}
+
+
+// TITLE
+//
+// trv_title_podcast_title();
+// trv_title_podcast_title_nolink();
+
+.item.title.podcast_title {
+	@extend %fontsize-medium !optional;
+	font-weight: 700;
+	line-height: 1.2;
+
+	a {
+		text-decoration: none;
+		color: $base-color;
+
+		&:hover {
+			 color: brand-color( 'teal' );
+		}
+	}
+
+	.module.post-summary {}
+}
+
+
+// AUTHOR
+//
+// setup_be_author_name() {;
+// setup_be_author_by_name() {;
+// setup_be_author_gravatar_name() {;
+// setup_be_author_gravatar_by_name() {;
+
+.item.author {
+	font-size: 0.875rem;
+
+	.module.post-summary {}
+}
+/**
+ * Need to fix gravatar styles eventually
+ */
+
+
+// DATE
+//
+// setup_be_date_mdy() {;
+// setup_be_date_weekday_mdy() {;
+
+.item.date {
+	font-size: 0.875rem;
+
+	.module.post-summary {}
+}
+
+
+// EXCERPT
+//
+// setup_be_excerpt();
+// setup_be_excerpt_maxwords();
+
+.item.excerpt {
+	font-size: 1rem;
+
+	.module.post-summary & {}
+}
+
+
+// DATE & AUTHOR (ITEMS)
+// 
+// setup_be_date_by_author_name();
+// setup_be_date_vbar_author_name();
+
+.items.date_vbar_author_name {
+
+	.item.vbar {
+		font-size: 0.875rem;
+	}
+
+	.module.post-summary & {
+		margin-top: 1rem;
+	}
+}
+
+
+
+
+
+
+.items.meta {
+	.post-summary & {
+		font-size: 0.875rem;
+		margin-top: 1rem;
+	}
+}
+.item.date {
+	.post-summary & {}
+	.post-summary .items.meta & {}
+}
+
+// AUTHOR ICON
+
+.item.author.icon {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+
+	img {
+		//display: inline;
+		border-radius: 50%;
+	}
+	.gravatar {
+		margin-right: 0.5rem;
+	}
+}
+
+.post-summary {
+	margin-bottom: $grid-gap;
+}

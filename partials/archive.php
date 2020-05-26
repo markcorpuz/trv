@@ -10,6 +10,8 @@
 
 echo '<article class="module post-summary">';
 
+echo '<div class="item">';
+
 	// FEATURED IMAGE
 	setup_be_image();
 	//setup_be_image_nolink();

@@ -8,8 +8,30 @@
  * @license      GPL-2.0+
 **/
 
-echo '<article class="post-summary module podcast">';
-    
+echo '<article class="module podcast post-summary">';
+echo '<div class="item grid-fourth-threefourth">';
+
+    echo '<div class="items pic">';
+        trv_image_podcast_pic();
+        //trv_image_podcast_pic_nolink();
+    echo '</div>';
+    echo '<div class="items info">';
+        trv_title_podcast_title();
+        //trv_title_podcast_title_nolink();
+        trv_editor_podcast_embed_cta();
+        trv_editor_podcast_embed();
+        //trv_cta_podcast();
+        setup_be_excerpt();
+        //setup_be_excerpt_maxwords();
+        trv_link_podcast_link();
+        trv_link_podcast_link_apple();
+        trv_link_podcast_link_spotify();
+    echo '</div>';
+
+echo '</div>';
+echo '</article>';
+
+ /*   
     // NATIVE | ID
     $pid = get_the_ID();
 
@@ -97,6 +119,4 @@ echo '<article class="post-summary module podcast">';
         echo '</div>';
 
     echo '</div>';
-    
-    
-echo '</article>';
+*/

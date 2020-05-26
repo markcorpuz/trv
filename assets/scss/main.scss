@@ -1,5 +1,6 @@
-/* SETUP-BE | 1.0.0 | 200513 | assets/scss/main.scss
+/* TRV | 1.0.0 | 200526 | assets/scss/main.scss
 ---------------------------------------------------------------------------------------------------- */
+// SETUP-BE | 1.0.0 | 200513 | assets/scss/main.scss
 
 // MAIN
 @import "partials/base";
@@ -15,6 +16,7 @@
 @import "partials/widget";
 @import "partials/navigation";
 @import "partials/post-summary";
+@import "partials/post-summary-podcast";
 @import "partials/archive";
 @import "partials/singular";
 @import "partials/site-footer";
