@@ -1,9 +1,11 @@
-/* SETUP-BE | 1.0.0 | 200521 | assets/scss/partials/archive.scss
+/* SETUP-BE | 1.0.0 | 200526 | assets/scss/partials/archive.scss
 ---------------------------------------------------------------------------------------------------- */
 
 .archive {
 
 	.site-main {
+
+		grid-row-gap: $grid-gap;
 
 		.block-area,
 		.no-results {
