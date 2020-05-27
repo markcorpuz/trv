@@ -16,7 +16,12 @@
 
 .item.grid-fourth-threefourth {
 	display: grid;
-	grid-template-columns: 1fr 3fr;
+	grid-template-columns: 1fr 4fr;
+	grid-gap: 1.5rem;
+}
+.item.grid-fifth-fourfifth {
+	display: grid;
+	grid-template-columns: 1fr 4fr;
 	grid-gap: 1.5rem;
 }
 .items.info {}
@@ -28,7 +33,7 @@
 // trv_title_podcast_title_nolink();
 
 .item.title.podcast_title {
-	@extend %fontsize-medium !optional;
+	font-size: 1.5rem;
 	font-weight: 700;
 	line-height: 1.2;
 
@@ -45,95 +50,45 @@
 }
 
 
-// AUTHOR
+// PODCAST
 //
-// setup_be_author_name() {;
-// setup_be_author_by_name() {;
-// setup_be_author_gravatar_name() {;
-// setup_be_author_gravatar_by_name() {;
+// trv_editor_podcast_embed_cta();
+// trv_link_podcast_link();
+// trv_link_podcast_link_apple();
+// trv_link_podcast_link_spotify();
 
-.item.author {
+.item.link.podcast-link {
 	font-size: 0.875rem;
+	font-weight: 500;
 
-	.module.post-summary {}
+	a {
+		color: brand-color( 'teal' );
+
+		&:hover {
+			 color: brand-color( 'teal', darken );
+		}
+	}
+
 }
-/**
- * Need to fix gravatar styles eventually
- */
 
 
-// DATE
+
+// EMBED
 //
-// setup_be_date_mdy() {;
-// setup_be_date_weekday_mdy() {;
+// trv_editor_podcast_embed();
+// trv_editor_podcast_embed_cta;()
 
-.item.date {
-	font-size: 0.875rem;
+.item.link.podcast-link.podcast-embed-cta {
+	font-weight: 600;
 
-	.module.post-summary {}
-}
+	a {
+		text-decoration: none;
+		color: brand-color( 'teal' );
 
-
-// EXCERPT
-//
-// setup_be_excerpt();
-// setup_be_excerpt_maxwords();
-
-.item.excerpt {
-	font-size: 1rem;
-
-	.module.post-summary & {}
-}
-
-
-// DATE & AUTHOR (ITEMS)
-// 
-// setup_be_date_by_author_name();
-// setup_be_date_vbar_author_name();
-
-.items.date_vbar_author_name {
-
-	.item.vbar {
-		font-size: 0.875rem;
+		&:hover {
+			text-decoration: underline;
+			color: brand-color( 'teal', darken );
+		}
 	}
 
-	.module.post-summary & {
-		margin-top: 1rem;
-	}
-}
-
-
-
-
-
-
-.items.meta {
-	.post-summary & {
-		font-size: 0.875rem;
-		margin-top: 1rem;
-	}
-}
-.item.date {
-	.post-summary & {}
-	.post-summary .items.meta & {}
-}
-
-// AUTHOR ICON
-
-.item.author.icon {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-
-	img {
-		//display: inline;
-		border-radius: 50%;
-	}
-	.gravatar {
-		margin-right: 0.5rem;
-	}
-}
-
-.post-summary {
-	margin-bottom: $grid-gap;
 }

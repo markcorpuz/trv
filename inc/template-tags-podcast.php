@@ -36,6 +36,20 @@ function trv_title_podcast_title_nolink() {
 
 
 /**
+ * EMBED - PODCAST
+ * 
+ */
+
+function trv_editor_podcast_embed() {
+	$podcast_embed = get_post_meta( get_the_ID(), "podcast_embed", TRUE );
+	echo '<div class="item podcast-embed">'.$podcast_embed.'</div>';
+}
+function trv_editor_podcast_embed_cta() {
+	echo '<div class="item link podcast-link podcast-embed-cta"><a href="' . get_permalink() . '" tabindex="-1" aria-hidden="true">Listen Now</a></div>';
+}
+
+
+/**
  * CTA - PODCAST
  * 
  */
@@ -52,27 +66,13 @@ function trv_cta_podcast() {
 
 function trv_link_podcast_link() {
 	$podcast_link = get_post_meta( get_the_ID(), "podcast_link", TRUE );
-	echo '<a class="item link podcast_link" href="' . $podcast_link . '" tabindex="-1" aria-hidden="true">Click to Listen Here</a>';
+	echo '<span class="item link podcast-link"><a href="' . get_permalink() . '" tabindex="-1" aria-hidden="true">View Full Detail</a></span>';
 }
 function trv_link_podcast_link_apple() {
 	$podcast_link_apple = get_post_meta( get_the_ID(), "podcast_link_apple", TRUE );
-	echo '<a class="item link podcast_link_apple" href="' . $podcast_link_apple . '" tabindex="-1" aria-hidden="true">Apple Podcasts</a>';
+	echo '<span class="item link podcast-link podcast-link-apple">&nbsp;&nbsp;|&nbsp;&nbsp;Listen on <a href="' . $podcast_link_apple . '" tabindex="-1" aria-hidden="true">Apple Podcasts</a>';
 }
 function trv_link_podcast_link_spotify() {
 	$podcast_link_spotify = get_post_meta( get_the_ID(), "podcast_link_spotify", TRUE );
-	echo '<a class="item link podcast_link_spotify" href="' . $podcast_link_spotify . '" tabindex="-1" aria-hidden="true">Spotify</a>';
-}
-
-
-/**
- * EMBED - PODCAST
- * 
- */
-
-function trv_editor_podcast_embed() {
-	$podcast_embed = get_post_meta( get_the_ID(), "podcast_embed", TRUE );
-	echo '<div class="item podcast-embed">'.$podcast_embed.'</div>';
-}
-function trv_editor_podcast_embed_cta() {
-	echo '<div class="item link podcast-embed-cta"><a href="' . get_permalink() . '" tabindex="-1" aria-hidden="true">Listen Now</a>';
+	echo '<span class="item link podcast-link podcast-link-spotify">&nbsp;&nbsp;|&nbsp;&nbsp;Listen on <a href="' . $podcast_link_spotify . '" tabindex="-1" aria-hidden="true">Spotify</a>';
 }

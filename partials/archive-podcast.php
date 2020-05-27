@@ -9,7 +9,7 @@
 **/
 
 echo '<article class="module podcast post-summary">';
-echo '<div class="item grid-fourth-threefourth">';
+echo '<div class="item grid-fifth-fourfifth">';
 
     echo '<div class="items pic">';
         trv_image_podcast_pic();
