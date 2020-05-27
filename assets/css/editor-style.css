@@ -821,12 +821,16 @@ div.wpforms-container.one-line:after {
   display: none;
 }
 
-/* SETUP-BE | 1.0.0 | 200521 | assets/scss/partials/post-summary.scss
+/* SETUP-BE | 1.0.0 | 200526 | assets/scss/partials/post-summary.scss
 ---------------------------------------------------------------------------------------------------- */
 .item.image {
   display: block;
 }
 .module.post-summary .item.image img {
+  margin-bottom: 1rem;
+}
+
+.module.post-summary .item.img {
   margin-bottom: 1rem;
 }
 
@@ -875,6 +879,18 @@ div.wpforms-container.one-line:after {
   margin-top: 1rem;
 }
 
+.item.edit a {
+  font-size: 0.5rem;
+  color: #fff;
+  background-color: #ccc;
+  padding: 2px 5px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.item.edit a:hover {
+  background-color: #63CECA;
+}
+
 .post-summary .items.meta {
   font-size: 0.875rem;
   margin-top: 1rem;
@@ -890,10 +906,6 @@ div.wpforms-container.one-line:after {
 }
 .item.author.icon .gravatar {
   margin-right: 0.5rem;
-}
-
-.post-summary {
-  margin-bottom: 32px;
 }
 
 body, p {
