@@ -24,15 +24,16 @@
  */
 
 function ea_post_summary_image( $size = 'thumbnail_medium' ) {
-	echo '<a class="post-summary__image" href="' . get_permalink() . '" tabindex="-1" aria-hidden="true">' . wp_get_attachment_image( ea_entry_image_id(), $size ) . '</a>';
+	echo '<a class="post-summary__image" href="' . get_permalink() . '" tabindex="-1" aria-hidden="true">' . wp_get_attachment_image( ea_entry_image_id(), $size, "", ["class" => "item img"] ) . '</a>';
 }
 
 function setup_be_image( $size = 'thumbnail_medium' ) {
-	echo '<a class="item image link" href="' . get_permalink() . '" tabindex="-1" aria-hidden="true">' . wp_get_attachment_image( ea_entry_image_id(), $size ) . '</a>';
+	echo '<a class="item image link" href="' . get_permalink() . '" tabindex="-1" aria-hidden="true">' . wp_get_attachment_image( ea_entry_image_id(), $size, "", ["class" => "item img"] ) . '</a>';
 }
 function setup_be_image_nolink( $size = 'thumbnail_medium' ) {
-	echo wp_get_attachment_image( ea_entry_image_id(), $size );
+	echo wp_get_attachment_image( ea_entry_image_id(), $size, "", ["class" => "item img"] );
 }
+
 
 /**
  * Entry Image ID
@@ -214,3 +215,32 @@ function ea_entry_author() {
 	        echo '<div class="item excerpt">'.wp_trim_words( $the_excerpt, $max_words ).'</div>';
 	    }
 	}
+
+
+/**
+ * PERMALINK - BRAND
+ * 
+ */
+
+function setup_be_edit() {
+
+	// specify user privileges that can edit
+	$user_types = array( 'administrator', 'editor' );
+    
+	// validate if user is logged in
+	if( is_user_logged_in() ) {
+		
+		// what type of access
+		foreach( $user_types as $user_type ) {
+
+			if( current_user_can( $user_type ) ){
+
+				// regular link				
+				//return edit_post_link( 'Edit entry' );
+				// OR
+				// you might want to use the URL for other purposes
+				echo '<div class="item edit"><a href="'.get_edit_post_link( get_the_ID() ).'">EDIT</a></div>';
+			}
+		}
+	}
+}

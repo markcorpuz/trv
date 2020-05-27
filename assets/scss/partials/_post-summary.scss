@@ -1,5 +1,11 @@
-/* SETUP-BE | 1.0.0 | 200521 | assets/scss/partials/post-summary.scss
+/* SETUP-BE | 1.0.0 | 200526 | assets/scss/partials/post-summary.scss
 ---------------------------------------------------------------------------------------------------- */
+
+
+// MODULE POST-SUMMARY
+//
+
+.module.post-summary {}
 
 
 // FEATURED IMAGE
@@ -14,6 +20,12 @@
 		img {
 			margin-bottom: 1rem;
 		}
+	}
+}
+.item.img {
+
+	.module.post-summary & {
+		margin-bottom: 1rem;
 	}
 }
 
@@ -124,6 +136,27 @@
 }
 
 
+// EDIT
+// 
+// setup_be_edit();
+
+.item.edit {
+
+	a {
+		font-size: 0.5rem;
+		color: #fff;
+		background-color: #ccc;
+		padding: 2px 5px;
+		border-radius: 5px;
+		text-decoration: none;
+		
+		&:hover {
+			background-color: $highlight;
+		}
+
+	}
+}
+
 
 
 
@@ -139,6 +172,7 @@
 	.post-summary .items.meta & {}
 }
 
+
 // AUTHOR ICON
 
 .item.author.icon {
@@ -153,8 +187,4 @@
 	.gravatar {
 		margin-right: 0.5rem;
 	}
-}
-
-.post-summary {
-	margin-bottom: $grid-gap;
 }

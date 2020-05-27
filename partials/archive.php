@@ -42,6 +42,9 @@ echo '<article class="module post-summary">';
 		setup_be_excerpt();
 		//setup_be_excerpt_maxwords();
 
+		// ADMIN
+		setup_be_edit();
+
 	echo '</div>';
 
 echo '</article>';
