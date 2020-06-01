@@ -1,4 +1,4 @@
-/* SETUP-BE | 1.0.0 | 200526 | assets/scss/partials/post-summary.scss
+/* SETUP-BE | 1.0.0 | 200601 | assets/scss/partials/post-summary.scss
 ---------------------------------------------------------------------------------------------------- */
 
 
@@ -51,7 +51,7 @@
 		}
 	}
 
-	.module.post-summary {}
+	.module.post-summary & {}
 }
 
 
@@ -74,7 +74,7 @@
 		}
 	}
 
-	.module.post-summary {}
+	.module.post-summary & {}
 }
 
 
@@ -88,7 +88,7 @@
 .item.author {
 	font-size: 0.875rem;
 
-	.module.post-summary {}
+	.module.post-summary & {}
 }
 /**
  * Need to fix gravatar styles eventually
@@ -103,7 +103,7 @@
 .item.date {
 	font-size: 0.875rem;
 
-	.module.post-summary {}
+	.module.post-summary & {}
 }
 
 
